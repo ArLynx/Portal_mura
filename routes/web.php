@@ -1,12 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
 use App\Http\Controllers\HomeController;
 use App\Http\COntrollers\MurungrayaController;
 
@@ -17,4 +11,3 @@ use App\Http\COntrollers\MurungrayaController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/murungraya', [MurungrayaController::class, 'index'])->name('murungraya.index');
->>>>>>> 6cf44a4 (edit deploy)

@@ -15,122 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<<<<<<< HEAD
-
-    <style>
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
-
-        .carousel,
-        .carousel-inner,
-        .carousel-item,
-        .carousel-item img {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-        }
-
-        .carousel {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -2;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* background: rgba(0, 0, 0, 0); */
-            z-index: -1;
-        }
-
-
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            border: 3px solid white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
-
-    <style>
-        @keyframes rotateOnce {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .animate-rotateOnce {
-            animation: rotateOnce 1s ease-in-out;
-        }
-    </style>
-
-    <style>
-        @keyframes flip {
-            0% {
-                transform: rotateY(0deg);
-            }
-
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-        .animate-flip {
-            animation: flip 1s ease-in-out;
-        }
-    </style>
-
-    <style>
-        @keyframes bounceUp {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-
-            60% {
-                transform: translateY(-10%);
-                opacity: 1;
-            }
-
-            80% {
-                transform: translateY(5%);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .animate-bounceUp {
-            animation: bounceUp 0.6s ease-out;
-        }
-
-        .g-4 {
-            --bs-gutter-x: -20rem;
-        }
-    </style>
-=======
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('lambang_mura.png') }}">
 
@@ -140,7 +24,6 @@
     <link rel="canonical" href="https://murungrayakab.go.id"> <!-- ganti dengan domain -->
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
->>>>>>> 6cf44a4 (edit deploy)
 
 
 
@@ -154,11 +37,7 @@
 <body>
 
     <!-- Background Carousel -->
-<<<<<<< HEAD
-    <div id="bgCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-=======
     <div id="bgCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="300000">
->>>>>>> 6cf44a4 (edit deploy)
         <div class="carousel-inner">
             {{-- <div class="carousel-item active">
                 <img src="Tugu_Bundaran_Emas.jpg" alt="Background 1">
@@ -170,19 +49,11 @@
                 <img src="Kantor_Kecamatan_Murung,_Murung_Raya.jpg" alt="Background 3">
             </div> --}}
             <div class="carousel-item active">
-<<<<<<< HEAD
-            <video class="w-100" autoplay loop muted playsinline>
-              <source src="video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-=======
                 <video class="w-100" autoplay loop muted playsinline>
                     <source src="Tana Malai Tolung Lingu (MURA).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
->>>>>>> 6cf44a4 (edit deploy)
         </div>
     </div>
 
@@ -198,140 +69,7 @@
     <h5 style="text-align:center; color:rgb(255, 255, 255);" class="mb-3"> TANA MALAI TOLONG LINGU</h5>
 
     <div class="container">
-<<<<<<< HEAD
-        <div class="row g-4 mt-4">
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, rotate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        class="bg-white bg-opacity-50 rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer relative">
-
-                        <img @click="open = !open; rotate = true" :class="{ 'animate-rotateOnce': rotate }"
-                            @animationend="rotate = false" src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black bg-white" />
-                        <!-- Tooltip -->
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE SOPD
-                        </div>
-                    </div>
-
-                    <!-- Modal di atas Avatar -->
-                    <div x-show="open" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 translate-y-4"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        class="absolute bottom-[170px] left-[83px] transform -translate-x-1/2 bg-white rounded-xl shadow-xl p-4 w-72 max-h-64 overflow-y-auto">
-
-
-                        <!-- Panah Arah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h5 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h5>
-                        <div class="space-y-2">
-                            <a href="#" style="text-decoration: none;"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm">Dinas
-                                Pendidikan</a>
-                            <a href="#" style="text-decoration: none;"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm">Dinas
-                                Kesehatan</a>
-                            <a href="https://diskominfo.murungrayakab.go.id/" style="text-decoration: none;"
-                                class="block w-full text-center bg-red-600 text-white py-2 rounded hover:bg-red-700 text-sm"
-                                target="_blank">Dinas Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-                <div x-data="{
-                    open: false,
-                    animate: false,
-                    avatars: [
-                        'lambang_mura.png',
-                        'Kantor_Bupati_Murung_Raya.jpg',
-                    ],
-                    currentIndex: 0,
-                    transitioning: false,
-                    get currentAvatar() {
-                        return this.avatars[this.currentIndex];
-                    },
-                    nextAvatar() {
-                        this.transitioning = true;
-                        setTimeout(() => {
-                            this.currentIndex = (this.currentIndex + 1) % this.avatars.length;
-                            this.transitioning = false;
-                        }, 200); // waktu fade out
-                    }
-                }" 
-                x-init="$watch('open', value => { if (!value) currentIndex = 0 })"
-                @click.outside="resetAvatar()"
-                class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-
-                    <!-- Avatar Card -->
-                    <div
-                        class="bg-white rounded-full bg-opacity-50 shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer overflow-hidden">
-
-                        <img @click="open = !open; animate = true; nextAvatar()"
-                            :class="[
-                                animate ? 'animate-flip' : '',
-                                transitioning ? 'opacity-0' : 'opacity-100',
-                                'transition-opacity duration-300 ease-in-out'
-                            ]"
-                            @animationend="animate = false" :src="currentAvatar" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black bg-white" />
-
-
-                    </div>
-
-                    <!-- Modal -->
-                    <div x-show="open" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 translate-y-4"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        class="absolute bottom-[170px] left-[80px] transform -translate-x-1/2 z-50 bg-white rounded-xl shadow-xl p-4 w-72">
-                        <!-- Panah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h5 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h5>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-=======
         <div class="row g-4 mt-2">
->>>>>>> 6cf44a4 (edit deploy)
             <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
 
                 <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
@@ -344,11 +82,7 @@
                             class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
                         <div x-show="showTooltip" x-transition
                             class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-<<<<<<< HEAD
-                            WEBSITE WISATA
-=======
                             MURUNG RAYA
->>>>>>> 6cf44a4 (edit deploy)
                         </div>
                     </div>
 
@@ -364,19 +98,6 @@
                             class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
                         </div>
 
-<<<<<<< HEAD
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-=======
                         <h5 class="text-lg font-semibold text-center text-gray-800 mb-4">MURUNG RAYA</h5>
                         <div class="space-y-2">
                             <a href="{{ route('murungraya.index') }}#peta" target="_blank"
@@ -388,7 +109,6 @@
                             <a href="{{ route('murungraya.index') }}#sejarah" target="_blank"
                                 class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline" style="text-decoration: none;">
                                 SEJARAH</a>
->>>>>>> 6cf44a4 (edit deploy)
                         </div>
                         <button @click="open = false"
                             class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
@@ -398,8 +118,6 @@
 
             </div>
 
-<<<<<<< HEAD
-=======
             <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
 
                 <div x-data="{ rotate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
@@ -546,7 +264,6 @@
 
             </div>
 
->>>>>>> 6cf44a4 (edit deploy)
 
 
             <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
@@ -557,19 +274,11 @@
                         @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''"
                         @animationend="animate = false"
                         class="bg-white rounded-full bg-opacity-50 shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-<<<<<<< HEAD
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-=======
                         <img src="asset/tranparasi.png" alt="Avatar"
                             class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
                         <div x-show="showTooltip" x-transition
                             class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
                             TRANSPARASI
->>>>>>> 6cf44a4 (edit deploy)
                         </div>
                     </div>
 
@@ -585,117 +294,6 @@
                             class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
                         </div>
 
-<<<<<<< HEAD
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''"
-                        @animationend="animate = false"
-                        class="bg-white rounded-full bg-opacity-50 shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-                        </div>
-                    </div>
-
-                    <!-- Modal di atas Avatar -->
-                    <div x-show="open" x-transition:enter="" x-transition:enter-start="" x-transition:enter-end=""
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        x-bind:class="open ? 'animate-bounceUp' : ''"
-                        class="absolute bottom-[170px] left-[80px] transform -translate-x-1/2 z-50 bg-white rounded-xl shadow-xl p-4 w-72">
-                        <!-- Panah Arah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''"
-                        @animationend="animate = false"
-                        class="bg-white rounded-full bg-opacity-50 shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-                        </div>
-                    </div>
-
-                    <!-- Modal di atas Avatar -->
-                    <div x-show="open" x-transition:enter="" x-transition:enter-start="" x-transition:enter-end=""
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        x-bind:class="open ? 'animate-bounceUp' : ''"
-                        class="absolute bottom-[170px] left-[80px] transform -translate-x-1/2 z-50 bg-white rounded-xl shadow-xl p-4 w-72">
-                        <!-- Panah Arah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-=======
                         <h5 class="text-lg font-semibold text-center text-gray-800 mb-4">TRANSPARASI</h5>
                         <div class="space-y-2">
                             <a href="http://ppid.murungrayakab.go.id/" target="_blank"
@@ -707,7 +305,6 @@
                             <a href="https://data.murungrayakab.go.id/?files" target="_blank"
                                 class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline" style="text-decoration: none;">
                                 IPKD</a>
->>>>>>> 6cf44a4 (edit deploy)
                         </div>
                         <button @click="open = false"
                             class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
@@ -724,21 +321,6 @@
         </div>
 
         <div class="row g-4 mt-2">
-<<<<<<< HEAD
-              <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative ">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''" 
-                        @animationend="animate = false"
-                        class="bg-white rounded-full bg-opacity-50 shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-=======
 
               <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
 
@@ -794,7 +376,6 @@
                         <div x-show="showTooltip" x-transition
                             class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
                             MCP KPK
->>>>>>> 6cf44a4 (edit deploy)
                         </div>
                     </div>
 
@@ -830,183 +411,6 @@
 
             </div>
 
-<<<<<<< HEAD
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''"
-                        @animationend="animate = false"
-                        class="bg-white bg-opacity-50 rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full bg-white w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-                        </div>
-                    </div>
-
-                    <!-- Modal di atas Avatar -->
-                    <div x-show="open" x-transition:enter="" x-transition:enter-start="" x-transition:enter-end=""
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        x-bind:class="open ? 'animate-bounceUp' : ''"
-                        class="absolute bottom-[170px] left-[80px] transform -translate-x-1/2 z-50 bg-white rounded-xl shadow-xl p-4 w-72">
-                        <!-- Panah Arah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-                        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ open: false, animate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false"
-                        @click="open = !open; animate = true" :class="animate ? 'animate-flip' : ''"
-                        @animationend="animate = false"
-                        class="bg-white rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <img src="lambang_mura.png" alt="Avatar"
-                            class="rounded-full w-[120px] h-[120px] object-cover border-4 border-black" />
-                        <div x-show="showTooltip" x-transition
-                            class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
-                            WEBSITE WISATA
-                        </div>
-                    </div>
-
-                    <!-- Modal di atas Avatar -->
-                    <div x-show="open" x-transition:enter="" x-transition:enter-start="" x-transition:enter-end=""
-                        x-transition:leave="transition ease-in duration-200"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 translate-y-4" @click.outside="open = false"
-                        x-bind:class="open ? 'animate-bounceUp' : ''"
-                        class="absolute bottom-[170px] left-[80px] transform -translate-x-1/2 z-50 bg-white rounded-xl shadow-xl p-4 w-72">
-                        <!-- Panah Arah -->
-                        <div
-                            class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white">
-                        </div>
-
-                        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">DAFTAR WEBSITE SOPD</h3>
-                        <div class="space-y-2">
-                            <a href="#"
-                                class="block w-full text-center bg-gray-400 text-white py-2 rounded hover:bg-gray-500 text-sm no-underline">Dinas
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kesehatan</a>
-                            <a href="#"
-                                class="block w-full text-center bg-blue-600 text-white py-2 rounded hover:bg-blue-700 text-sm no-underline">Dinas
-                                Kominfo</a>
-                        </div>
-                        <button @click="open = false"
-                            class="mt-4 w-full text-sm text-gray-500 hover:text-gray-700">Tutup</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
-
-                <div x-data="{ rotate: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @click="rotate = true;" :class="{ 'animate-flip': rotate }"
-                        @animationend="rotate = false"
-                        class="bg-white rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <a href="https://diskominfo.murungrayakab.go.id/"><img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Avatar"
-                                class="rounded-full w-[120px] h-[120px] object-cover" /></a>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                <div x-data="{ rotate: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2" data-aos="fade-up">
-                    <div @click="rotate = true; openModal1()" :class="{ 'animate-flip': rotate }"
-                        @animationend="rotate = false"
-                        class="cursor-pointer bg-white rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto hover:scale-105 transition-transform duration-300">
-                        <img src="informasi.png" alt="Avatar"
-                            class="rounded-full w-[120px] h-[120px] object-cover border-2 border-white" />
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="popupCardModal1"
-                class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-                <div class="bg-white rounded-xl shadow-xl w-[90%] max-w-xs p-6 animate-fade-in relative">
-
-                    <!-- Close Button -->
-                    <button onclick="closeModal1()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-
-                    <h5 class="text-lg font-semibold text-center mb-4 text-gray-800">Dinas Terkait</h5>
-
-                    <div class="flex flex-col gap-2">
-                        <a href="#"
-                            class="w-full bg-red-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Pendidikan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kesehatan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kim</a>
-                        <a href="#"
-                            class="w-full bg-red-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Pendidikan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kesehatan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kim</a>
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
-                <div x-data="{ rotate: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2" data-aos="fade-up">
-                    <div @click="rotate = true; openModal2()" :class="{ 'animate-flip': rotate }"
-                        @animationend="rotate = false"
-                        class="cursor-pointer bg-white rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto hover:scale-105 transition-transform duration-300">
-                        <img src="informasi.png" alt="Avatar"
-                            class="rounded-full w-[120px] h-[120px] object-cover border-2 border-white" />
-=======
             <div class="col-12 col-sm-6 col-lg-4 col-xl-2">
                 <div x-data="{ rotate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2" data-aos="fade-up">
                     <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false" @click="rotate = true; openModal2()" :class="{ 'animate-flip': rotate }"
@@ -1018,7 +422,6 @@
                             class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
                             PERANGKAT DAERAH
                         </div>
->>>>>>> 6cf44a4 (edit deploy)
                     </div>
                 </div>
             </div>
@@ -1026,12 +429,8 @@
 
             <div id="popupCardModal2"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-<<<<<<< HEAD
-                <div class="bg-white rounded-xl shadow-xl w-[90%] max-w-xs p-6 animate-fade-in relative max-h-200 overflow-y-auto">
-=======
                 <div
                     class="bg-white rounded-xl shadow-xl w-[90%] max-w-xs p-6 animate-fade-in relative max-h-150 overflow-y-auto">
->>>>>>> 6cf44a4 (edit deploy)
 
                     <!-- Close Button -->
                     <button onclick="closeModal2()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
@@ -1041,29 +440,6 @@
                         </svg>
                     </button>
 
-<<<<<<< HEAD
-                    <h5 class="text-lg font-semibold text-center mb-4 text-gray-800">Dinas Terkait</h5>
-
-                    <div class="flex flex-col gap-2">
-                        <a href="#"
-                            class="w-full bg-red-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Pendidikan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kesehatan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kim</a>
-                        <a href="#"
-                            class="w-full bg-red-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Pendidikan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kesehatan</a>
-                        <a href="#"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 rounded-md text-center">Dinas
-                            Kim</a>
-=======
                     <h4 class="text-lg font-semibold text-center mb-4 text-gray-800">PERANGKAT DAERAH</h4>
 
                     <div class="flex flex-col gap-2">
@@ -1108,7 +484,6 @@
                         <a href="https://example.com" class="btn btn-primary" target="_blank">KEC. Uut Murung</a>
                         <a href="https://example.com" class="btn btn-primary" target="_blank">KEC. Seribu Riam</a>
                         <a href="https://example.com" class="btn btn-primary" target="_blank">KEC. Sungai Babuat</a>
->>>>>>> 6cf44a4 (edit deploy)
 
                     </div>
                 </div>
@@ -1116,8 +491,6 @@
 
 
 
-<<<<<<< HEAD
-=======
             <div class="col-12 col-sm-6 col-lg-4 col-xl-2 position-relative" data-aos="fade-up">
 
                 <div x-data="{ rotate: false, showTooltip: false }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
@@ -1158,7 +531,6 @@
 
 
             </div>
->>>>>>> 6cf44a4 (edit deploy)
 
 
         </div>
@@ -1172,21 +544,6 @@
                     rotate: false,
                     showTooltip: false,
                     items: [
-<<<<<<< HEAD
-                        { label: '📘', title: 'Dinas Pendidikan', href: '#' },
-                        { label: '🏥', title: 'Dinas Kesehatan', href: '#' },
-                        { label: '🌐', title: 'Dinas Kominfo', href: 'https://diskominfo.murungrayakab.go.id/' },
-                        { label: '📊', title: 'Bappeda', href: '#' },
-                        { label: '📁', title: 'Inspektorat', href: '#' },
-                        { iconType: 'image', label: 'lambang_mura.png', title: 'Gambar Kominfo', href: '#' },
-                    ]
-                }" class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/6 p-2 relative">
-                    <!-- Avatar Card -->
-                    <div @click="open = !open"
-                        class="bg-white rounded-full shadow-lg w-[150px] h-[150px] flex items-center justify-center mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
-                        <a href="#"><img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Avatar"
-                                class="rounded-full w-[120px] h-[120px] object-cover" /></a>
-=======
                         { iconType: 'image', label: 'asset/instagram.png', title: 'Instagram', href: 'https://www.instagram.com/diskominfomurakab' },
                         { iconType: 'image', label: 'asset/youtube.png', title: 'Youtube', href: 'https://www.youtube.com/channel/UC1HMVrTzdaLdGcyV94sFbYA' },
                         { iconType: 'image', label: 'asset/facebook.png', title: 'Facebook', href: 'https://www.facebook.com/diskominfomurakab/?locale=id_ID' },
@@ -1204,7 +561,6 @@
                             class="absolute top-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-700 text-white text-xs rounded py-1 px-2 whitespace-nowrap z-50 shadow">
                             SOSIAL MEDIA
                         </div>
->>>>>>> 6cf44a4 (edit deploy)
                     </div>
 
                     <!-- Modal di atas Avatar -->
@@ -1214,17 +570,10 @@
                             <a :href="item.href" target="_blank" :title="item.title"
                                 class="absolute w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md hover:bg-blue-700 transition-transform duration-300 text-lg pointer-events-auto"
                                 :style="`
-<<<<<<< HEAD
-                                                  transform: rotate(${index * (360 / items.length)}deg)
-                                                            translate(100px)
-                                                            rotate(-${index * (360 / items.length)}deg);
-                                                `">
-=======
                                                                                   transform: rotate(${index * (360 / items.length)}deg)
                                                                                             translate(100px)
                                                                                             rotate(-${index * (360 / items.length)}deg);
                                                                                 `">
->>>>>>> 6cf44a4 (edit deploy)
                                 <template x-if="item.iconType === 'image'">
                                     <img :src="item.label" alt="" class="w-6 h-6 rounded-full" />
                                 </template>
@@ -1278,8 +627,6 @@
         }
     </script>
 
-<<<<<<< HEAD
-=======
     <script>
         function openModal3() {
             document.getElementById('popupCardModal3').classList.remove('hidden');
@@ -1292,7 +639,6 @@
 
     
 
->>>>>>> 6cf44a4 (edit deploy)
 </body>
 
 </html>
